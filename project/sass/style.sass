@@ -1,0 +1,323 @@
+///import css-variables from 
+@import 'vars'
+
+
+body
+	width: $width
+	margin: 0 auto
+	font-family: arial
+	background-color: #fff
+
+.header
+	background-color: #445162
+	display: flex
+	padding: 50px
+	justify-content: space-between
+	&-left-part
+		//outline: 1px solid black
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.product-name
+			font-size: 60px
+			line-height: 1.2
+			font-weight: 400
+			color: rgb(255, 255, 255)
+			margin: 0 0 50px 0
+		.products-description
+			margin: 0
+			padding: 0 0 0 36px
+			width: 458px
+			font-size: 20px
+			line-height: 36px
+			font-weight: 400
+			color: #fff
+			list-style-type: none
+			&-item
+				padding: 0
+				position: relative
+			&-item::before
+				//outline: 1px solid black
+				content: ""
+				display: block
+				width: 25px
+				height: 19px
+				position: absolute
+				top: 9px
+				left: -30px
+				background-image: url('../img/check_white.png')
+				background-size: cover
+	img
+		//outline: 1px solid black
+		display: block
+		background-color: #fff
+		min-height: 214px
+		width: 469px
+		font-size: 0
+.main
+	.about-product
+		//outline: 1px solid black
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		.section-part-left
+			width: 653px
+			font-size: 16px
+			line-height: 24px
+			font-weight: 400
+			color: #333
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			.section-header
+				font-size: 30px
+				line-height: 36px
+				font-weight: 400
+				color: #445161		
+			p
+				margin: 20px 0 0 0
+		.video-about-product
+			display: block
+			min-height: 245px
+				//outline: 1px solid black
+			background-color: #445161
+	.product-details
+		//outline: 1px solid black
+		background-color: #f5f5f5
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		align-items: center
+		&-header
+			width: 100%
+			text-align: center
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+			margin: 0 0 30px 0
+		&-block
+			display: flex
+			justify-content: space-between
+			.product-details-list
+				margin: 0
+				list-style-type: none
+				display: flex
+				justify-content: space-between
+				flex-direction: column
+				&-item:first-child
+					margin: 0
+				&-item
+					padding: 0 0 0 25px
+					margin: 35px 0 0 0
+					font-size: 16px
+					line-height: 24px
+					font-weight: 400
+					color: #333333
+					position: relative
+					&::before
+						content: "+"
+						display: block
+						width: 32px
+						height: 32px
+						background-color: #445161
+						position: absolute
+						color: #fff;
+						text-align: center
+						line-height: 32px
+						font-size: 28px
+						top: 5px
+						left: -16px
+						background-size: cover
+	.screenshots
+		padding: 50px
+		background-color: #fff
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		//outline: 1px solid
+		&-header
+			width: 100%
+			text-align: center
+			display: block
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+			margin: 0 0 35px 0
+		&-figure-block
+			display: flex
+			justify-content: space-between
+			flex-direction: row
+			flex-wrap: wrap
+			.screenshots-figure
+				margin: 0						
+				display: flex
+				justify-content: space-between
+				width: 48%
+				&-img
+					min-width: 200px
+					min-height: 150px
+					background-color: #445161
+					font-size: 0
+					margin: 0 15px 0 0
+				.screenshots-figcaption-block
+					display: flex
+					justify-content: space-between
+					flex-direction: column
+					margin: 0
+					&-header
+						font-size: 24px
+						line-height: 30px
+						font-weight: 400
+						color: #445161
+					.screenshots-figcaption-text
+						font-size: 16px
+						line-height: 24px
+						font-weight: 400
+						color: #333333
+	.reviews
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		background-color: #f5f5f5
+		align-items: flex-start
+		margin: 0
+		//outline: 1px solid  
+		&-header
+			display: block
+			width: 100%
+			text-align: center
+			margin: 0 0 51px 0
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+		&-figure-block
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			min-width: 424px
+			.reviews-figure				
+				min-width: 574px
+				min-height: 121px
+				margin: 0 16px 0 0						
+				display: flex
+				justify-content: space-between
+				width: 48%
+				padding: 0 0 24px 0
+				&-img
+					min-width: 75px
+					height: 75px
+					border-radius: 50%
+					background-color: #445161
+					font-size: 0
+					margin: 0 30px 0 0
+				.reviews-figcaption-text-block
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					background-color: #ebebeb
+					border-radius: 8px
+					padding: 16px
+					position: relative
+					&:before 
+						content: ""
+						display: block
+						border: 14px solid transparent
+						border-right: 14px solid #ebebeb
+						position: absolute
+						top: 20px
+						left: -27px
+					.reviews-figcaption-text
+						font-size: 14px
+						line-height: 18px
+						font-weight: 400
+						font-style: italic
+						color: #333333
+						margin: 0
+					&-autor
+						font-size: 14px
+						line-height: 18px
+						font-weight: 400
+						color: #989898
+						margin: 0
+	.buy-it-now
+		min-height: 656px
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		background-color: #fff
+		flex-direction: column
+		outline: 1px solid
+		.buy-it-now-header
+			display: block
+			width: 100%
+			text-align: center
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+		.buy-it-now-tarifs
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			padding: 0 95px 0 95px
+			.tarif
+				display: flex
+				flex-direction: column
+				background-color: #445162
+				border-radius: 8px
+				max-width: 300px
+				padding: 0 20px 0 20px
+				&-header
+					font-size: 24px
+					line-height: 30px
+					font-weight: 400
+					color: #ffffff
+					text-align: center
+					padding: 16px 0 16px 0
+				&-price
+					margin: 0 0 0 -20px
+					width: 100%
+					background-color: #fff
+					border: 2.0px solid #445162
+					text-align: center
+					padding: 18px
+					font-size: 40px
+					line-height: 30px
+					font-weight: 400
+					color: #445162
+				&-description
+					list-style-type: none
+					padding: 20px 0 20px 0
+					margin: 0
+					font-size: 14px
+					line-height: 24px
+					font-weight: 400
+					color: #ffffff
+				.button-buy
+					text-decoration: none
+					display: block
+					width: 90%
+					background-color: #ffffff
+					text-align: center
+					margin: 0 0 20px 0
+					padding: 13px
+					border-radius: 8px
+					&:hover
+						background-color: #cccccc
+					&-text
+						font-size: 18px
+						line-height: 18px
+						font-weight: 700
+						color: #445161
+			.tarif-standart
+				height: 334px
+			.tarif-premium
+				height: 432px
+			.tarif-lux
+				height: 526px
+	.footer
