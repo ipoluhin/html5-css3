@@ -1,0 +1,273 @@
+@import 'vars'
+@import 'mixin'
+@import 'blocks'
+
+.header
+    margin: 0 auto
+    max-width: $width
+    height: 1024px
+    background-color: rgba(17,17,17,0.7)
+    background-image: url('../img/bg/bg_photo.png') 
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    +dflex($spb, column)
+    align-items: center
+    padding: 40px 0
+    .head-block
+        display: flex
+        justify-content: space-between
+        width: 1170px
+        height: 56px
+        align-self: center
+        //+outl
+        .header__logo
+            width: 185px
+            &:hover
+                color: #998675
+            .logo-icon 
+                fill: CurrentColor
+            .logo-txt 
+                font-family: 'Raleway', sans-serif
+                font-size: 34px
+        .nav-func
+            align-items: center
+            +dflex($spb, row)
+            .nav-link
+                text-decoration: none
+                margin: 0 30px 0 0    
+                .link-text                
+                    font-family: Montserrat
+                    font-size: 14px
+                    line-height: 1.2
+                    font-weight: 300
+                    color: #ffffff
+                    text-align: center
+                    &:hover
+                        color: #c7b299
+            .cart
+                width: 18px
+                height: 24px
+                margin: 0 0 0 33px
+                fill: #ffffff
+                //+outl
+                &:hover
+                    fill: #c7b299
+            .search-input
+                width: 24px
+                height: 24px
+                margin: 0 0 0 26px
+                fill: #ffffff
+                //+outl
+                &:hover
+                    fill: #c7b299
+
+    .slider-block
+        width: 1620px
+        height: 603px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        align-items: center
+        //+outl
+        .header__slider
+            margin: -55px 0 0 0
+            width: 1620px
+            height: 261px
+            //+outl
+            .slider-text
+                align-items: center
+                +dflex($spb, column)
+                .text-unique
+                    display: block
+                    font-family: Raleway
+                    font-size: 36px
+                    line-height: 1.2
+                    font-weight: 500
+                    color: #ffffff
+                    margin: -26px 0 14px 0
+                .text-portfolio
+                    display: block
+                    font-family: Raleway
+                    font-size: 52px
+                    line-height: 1.2
+                    font-weight: 800
+                    color: #ffffff
+                    margin: 0 0 19px 0
+                .text-paragraph
+                    font-family: Montserrat
+                    font-size: 16px
+                    line-height: 24px
+                    font-weight: 300
+                    color: #ffffff
+                    margin: 0 0 52px 0 
+                .paragraph__button                                 
+                    .button-text
+                        padding: 21px 38px
+                        font-family: Raleway
+                        font-size: 14px
+                        line-height: 23px
+                        font-weight: 800
+                        text-transform: uppercase
+                        background-color: #998675
+                        color: #ffffff
+                        border-radius: 3px
+                        text-decoration: none
+                        &:hover
+                            box-shadow: 3px  3px 5px 3px #000
+            .slider-btn-link
+                display: block                
+                .slider-btn-left, 
+                .slider-btn-right
+                    fill: #d3c1ad
+                    //+outl
+                    &:hover
+                        fill: #a3a2a0
+                
+        .pagination
+            width: 98px
+            height: 11px
+            +dflex($spb, row)
+            align-items: center
+            //+outl
+            &-item
+                display: block
+                width: 11px
+                height: 11px
+                background-color: #909093
+                border: 1px solid transparent
+                border-radius: 50%
+                &:hover
+                    transform: scale(1.2)
+                    border: 2.0px solid #ae9f90
+                    background-color: #27262b
+
+.main
+    .services
+        margin: 0 auto
+        max-width: $width
+        height: 1073px
+        +dflex($spb, column)
+        align-items: center
+        padding: 50px 0 0 0
+        //+outl
+        .services-list
+            alig-self: center
+            width: $width
+            display: flex
+            justify-content: center
+            margin: 0 0 160px 0
+            .services-item 
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                width: 300px
+                padding: 10px 10px 0 10px
+                box-sizing: border-box
+                &:after 
+                    content: ""
+                    display: block
+                    width: 150px
+                    height: 3px
+                    background-color: #555555
+                &:hover .services-item-icon 
+                    fill: #c7b299
+                &:hover .services-item-title 
+                    color: #c7b299
+                &:hover:after 
+                    background-color: #c7b299
+                &-icon 
+                    display: block
+                    fill: #555555
+                    margin: 0 0 20px 0
+                &-title 
+                    width: $width
+                    margin: 0 0 10px 0
+                    text-align: center
+                    font-family: Raleway
+                    font-size: 22px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: #555555
+                &-txt 
+                    text-align: center
+                    font-family: Montserrat
+                    font-size: 14px
+                    line-height: 14px
+                    font-weight: 300
+                    color: #8c8c8c
+        .development
+            background-color: #fbfaf8
+            align-items: center
+            +dflex($spb, column)
+            //+outl
+            .anons-block
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                width: 760px
+                text-align: center
+                .title
+                    font-family: Raleway
+                    font-size: 30px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: #555555
+                    //margin: 0 0 24px 0
+                .anons-text
+                    font-family: Montserrat
+                    font-size: 16px
+                    line-height: 28px
+                    font-weight: 300
+                    color: #8c8c8c
+            .img-block
+                width: 200%
+                min-height: 552px
+                background-image: url('../img/img-block/browser_center.png'), url('../img/img-block/browser_left.png'),url('../img/img-block/browser_right.png')
+                background-size: 65%, 58%, 58%
+                background-repeat: no-repeat
+                background-position: bottom center, bottom left, bottom right
+.aside-content
+    margin: 0 auto
+    padding: 60px 375px
+    width: 1920px
+    background-color: #f4f5f8
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%)
+    +dflex($spb, row)
+    align-items: center
+    .aside-text
+        +dflex($spb, column)
+        .aside-title
+            +dflex($spb, row)
+            align-items: center
+            font-family: Raleway
+            font-size: 28px
+            line-height: 1.2
+            font-weight: 400
+            color: #ffffff
+            margin: 0
+            .waxom-mini
+                color: #c7b299
+                margin: 0 5px 0 0 
+        .aside-paragraph
+            font-family: Montserrat
+            font-size: 18px
+            line-height: 1.2
+            font-weight: 300
+            color: #615855
+            margin: 8px 0 0 0
+    .aside__button                                 
+        .button-text
+            padding: 21px 38px
+            font-family: Raleway
+            font-size: 14px
+            line-height: 23px
+            font-weight: 800
+            text-transform: uppercase
+            background-color: #998675
+            color: #ffffff
+            border-radius: 3px
+            text-decoration: none
+            &:hover
+                box-shadow: 3px  3px 5px 3px #000
