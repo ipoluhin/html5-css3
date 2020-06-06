@@ -224,15 +224,15 @@ body {
   padding: 50px;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   background-color: #f5f5f5;
   align-items: flex-start;
   margin: 0;
+  flex-wrap: wrap;
 }
 
 .main .reviews-header {
   display: block;
-  width: 100%;
+  min-width: 100%;
   text-align: center;
   margin: 0 0 51px 0;
   font-size: 30px;
@@ -241,24 +241,16 @@ body {
   color: #445161;
 }
 
-.main .reviews-figure-block {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  min-width: 424px;
-}
-
-.main .reviews-figure-block .reviews-figure {
-  min-width: 574px;
-  min-height: 121px;
-  margin: 0 16px 0 0;
+.main .reviews-figure {
   display: flex;
   justify-content: space-between;
-  width: 48%;
+  max-width: 48%;
+  min-height: 121px;
+  margin: 0 16px 0 0;
   padding: 0 0 24px 0;
 }
 
-.main .reviews-figure-block .reviews-figure-img {
+.main .reviews-figure-img {
   min-width: 75px;
   border-radius: 50%;
   background-color: #445161;
@@ -266,7 +258,7 @@ body {
   margin: 0 22px 0 0;
 }
 
-.main .reviews-figure-block .reviews-figure .reviews-figcaption-text-block {
+.main .reviews-figure .reviews-figcaption-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -274,9 +266,15 @@ body {
   border-radius: 8px;
   padding: 16px;
   position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: italic;
+  color: #333333;
+  margin: 0;
 }
 
-.main .reviews-figure-block .reviews-figure .reviews-figcaption-text-block:before {
+.main .reviews-figure .reviews-figcaption-text:before {
   content: "";
   display: block;
   border: 14px solid transparent;
@@ -286,16 +284,7 @@ body {
   left: -27px;
 }
 
-.main .reviews-figure-block .reviews-figure .reviews-figcaption-text-block .reviews-figcaption-text {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  font-style: italic;
-  color: #333333;
-  margin: 0;
-}
-
-.main .reviews-figure-block .reviews-figure .reviews-figcaption-text-block-autor {
+.main .reviews-figure .reviews-figcaption-text .reviews-figcaption-text-autor {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -320,6 +309,7 @@ body {
   line-height: 36px;
   font-weight: 400;
   color: #445161;
+  margin: 0 0 40px 0;
 }
 
 .main .buy-it-now .buy-it-now-tarifs {
@@ -334,8 +324,6 @@ body {
   flex-direction: column;
   background-color: #445162;
   border-radius: 8px;
-  max-width: 300px;
-  min-height: 334px;
   padding: 0 20px 0 20px;
 }
 
@@ -363,7 +351,7 @@ body {
 
 .main .buy-it-now .buy-it-now-tarifs .tarif-description {
   padding: 20px 0 20px 0;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 20px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -400,15 +388,16 @@ body {
 }
 
 .main .buy-it-now .buy-it-now-tarifs .tarif-standart {
-  height: 334px;
+  min-height: 334px;
 }
 
 .main .buy-it-now .buy-it-now-tarifs .tarif-premium {
-  height: 432px;
+  min-height: 432px;
+  margin: 0 20px 0 20px;
 }
 
 .main .buy-it-now .buy-it-now-tarifs .tarif-lux {
-  height: 526px;
+  min-height: 526px;
 }
 
 .footer {
@@ -440,6 +429,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 500px;
+  margin: 0 10px 0 0;
 }
 
 .footer .footer__contacts .footer__form input[type="text"],
@@ -475,6 +465,10 @@ body {
   outline: none;
   text-align: center;
   text-transform: uppercase;
+}
+
+.footer .footer__contacts .footer__form .form__submit-button:hover {
+  background-color: #cccccc;
 }
 
 .footer .footer__contacts .social {
@@ -545,6 +539,7 @@ body {
   width: 42px;
   height: 42px;
   background-color: #fff;
+  background-size: cover;
   border-radius: 50%;
   text-align: center;
   margin: 0 10px 0 0;
