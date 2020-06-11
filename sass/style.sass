@@ -1,0 +1,645 @@
+/** Imports**/
+@import 'vars'
+@import 'mixin'
+@import 'blocks'
+
+/** Monserat font **/
+@font-face 
+    font-family: 'montserrat', 'arial', sans-serif
+    src: url('../fonts/montserrat/montserrat-ultralight.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'montserrat', 'arial', sans-serif
+    src: url('../fonts/montserrat/montserrat-light.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'montserrat', 'arial', sans-serif
+    src: url('../fonts/montserrat/montserrat-regular.ttf')
+    font-weight: normal
+    font-style: normal
+
+/** Raleway **/
+@font-face 
+    font-family: 'raleway', 'arial', sans-serif
+    src: url('../fonts/raleway/raleway-regular.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'raleway', 'arial', sans-serif
+    src: url('../fonts/raleway/raleway-semibold.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'raleway', 'arial', sans-serif
+    src: url('../fonts/raleway/raleway-bold.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'raleway', 'arial', sans-serif
+    src: url('../fonts/raleway/raleway-extrabold.ttf')
+    font-weight: normal
+    font-style: normal
+
+/** Roboto font **/
+@font-face 
+    font-family: roboto
+    src: url('../fonts/roboto/roboto-regular.ttf')
+    font-weight: normal
+    font-style: normal
+
+
+.header
+    margin: 0 auto
+    max-width: $width
+    height: 1024px
+    background-color: rgba(17,17,17,0.7)
+    background-image: url('../img/bg/bg_photo.png') 
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    +dflex($spb, column)
+    align-items: center
+    padding: 40px 0
+    .head-block
+        display: flex
+        justify-content: space-between
+        width: 1170px
+        height: 56px
+        align-self: center
+        //+outl
+        .header__logo
+            width: 185px
+            &:hover
+                color: #998675
+            .logo-icon 
+                fill: CurrentColor
+            .logo-txt
+                font-size: 34px 
+                +rel
+        .nav-func
+            align-items: center
+            +dflex($spb, row)
+            .nav-link
+                text-decoration: none
+                margin: 0 30px 0 0    
+                .link-text
+                    font-size: 14px
+                    line-height: 1.2
+                    font-weight: 300
+                    color: #ffffff
+                    text-align: center
+                    +monts
+                    &:hover
+                        color: #c7b299
+            .cart
+                width: 18px
+                height: 24px
+                margin: 0 0 0 33px
+                fill: #ffffff
+                //+outl
+                &:hover
+                    fill: #c7b299
+            .search-input
+                width: 24px
+                height: 24px
+                margin: 0 0 0 26px
+                fill: #ffffff
+                //+outl
+                &:hover
+                    fill: #c7b299
+    .slider-block
+        width: 1620px
+        height: 603px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        align-items: center
+        //+outl
+        .header__slider
+            margin: -55px 0 0 0
+            width: 1620px
+            height: 261px
+            //+outl
+            .slider-text
+                align-items: center
+                +dflex($spb, column)
+                .text-unique
+                    display: block
+                    font-size: 36px
+                    line-height: 1.2
+                    font-weight: 500
+                    color: #ffffff
+                    margin: -26px 0 14px 0
+                    +rel
+                .text-portfolio
+                    display: block
+                    font-size: 52px
+                    line-height: 1.2
+                    font-weight: 800
+                    color: #ffffff
+                    margin: 0 0 19px 0
+                    +rel
+                .text-paragraph
+                    font-size: 16px
+                    line-height: 24px
+                    font-weight: 300
+                    color: #ffffff
+                    margin: 0 0 52px 0
+                    +monts 
+                .paragraph__button                                 
+                    .button-text
+                        padding: 21px 38px
+                        font-size: 14px
+                        line-height: 23px
+                        font-weight: 800
+                        text-transform: uppercase
+                        background-color: #998675
+                        color: #ffffff
+                        border-radius: 3px
+                        text-decoration: none
+                        +rel
+                        &:hover
+                            box-shadow: 3px  3px 5px 3px #000
+                        &:active
+                            background-color: #ccc
+            .slider-btn-link
+                display: block                
+                .slider-btn-left, 
+                .slider-btn-right
+                    fill: #d3c1ad
+                    //+outl
+                    &:hover
+                        fill: #a3a2a0                
+        .pagination
+            width: 98px
+            height: 11px
+            +dflex($spb, row)
+            align-items: center
+            //+outl
+            &-item
+                display: block
+                width: 11px
+                height: 11px
+                background-color: #909093
+                border: 2px solid transparent
+                border-radius: 50%
+                &:hover
+                    transform: scale(1.2)
+                    border: 2.0px solid #ae9f90
+                    background-color: #27262b
+
+.main
+    max-width: $width
+    margin: 0 auto
+    .main__services
+        margin: 0 auto
+        max-width: $width
+        height: 1073px
+        +dflex($spb, column)
+        align-items: center
+        padding: 50px 0 0 0
+        //+outl
+        .services-list
+            alig-self: center
+            display: flex
+            justify-content: center
+            margin: 0 33px 160px 0
+            .services-item 
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                max-width: 300px
+                padding: 10px 10px 0 10px
+                box-sizing: border-box
+                &:after 
+                    content: ""
+                    display: block
+                    width: 70px
+                    height: 3px
+                    background-color: #555555
+                &:hover .services-item-icon 
+                    fill: #c7b299
+                &:hover .services-item-title 
+                    color: #c7b299
+                &:hover:after 
+                    background-color: #c7b299
+                &-icon 
+                    display: block
+                    fill: #555555
+                    margin: 0 0 20px 0
+                &-title 
+                    width: $width
+                    margin: 0 0 10px 0
+                    text-align: center
+                    font-size: 22px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: #555555
+                    +rel
+                &-txt 
+                    text-align: center
+                    font-size: 14px
+                    line-height: 14px
+                    font-weight: 300
+                    color: #8c8c8c
+                    +rel
+        .development
+            background-color: #fbfaf8
+            align-items: center
+            +dflex($spb, column)
+            //+outl
+            .anons-block
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                width: 760px
+                text-align: center
+                .title
+                    font-size: 30px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: #555555
+                    +rel
+                    //margin: 0 0 24px 0
+                .anons-text
+                    font-size: 16px
+                    line-height: 28px
+                    font-weight: 300
+                    color: #8c8c8c
+                    +rel
+            .img-block
+                width: 200%
+                min-height: 552px
+                background-image: url('../img/img-block/browser_center.png'), url('../img/img-block/browser_left.png'),url('../img/img-block/browser_right.png')
+                background-size: 65%, 58%, 58%
+                background-repeat: no-repeat
+                background-position: bottom center, bottom left, bottom right
+
+    .aside-content  
+        padding: 60px 0 53px
+        background-color: #f4f5f8
+        background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%)
+        +dflex(center, row)
+        align-items: center
+        .aside-text
+            width: 530px
+            +dflex(center, column)
+            align-content: center
+            margin: 0 375px 0 0
+            .aside-title
+                +dflex($spb, row)
+                align-items: center
+                font-size: 28px
+                line-height: 1.2
+                font-weight: 400
+                color: #ffffff
+                +rel
+                .waxom-mini
+                    display: block
+                    color: #c7b299
+                    margin: 0 0 0 0 
+            .aside-paragraph
+                font-size: 18px
+                line-height: 1.2
+                font-weight: 300
+                color: #615855
+                margin: 0 0 0 0
+                +monts
+        .aside__button                                 
+        .button-text
+            padding: 21px 38px
+            font-size: 14px
+            line-height: 23px
+            font-weight: 800
+            text-transform: uppercase
+            background-color: #998675
+            color: #ffffff
+            border-radius: 3px
+            text-decoration: none
+            +rel
+            &:hover
+                box-shadow: 3px  3px 5px 3px #000
+
+    .projects
+        max-width: $width
+        padding: 80px 0 
+        +dflex(center, column)
+        align-items: center
+        //+outl
+        &-title
+            font-size: 30px
+            line-height: 1.2
+            font-weight: 600
+            color: #555555
+            margin-bottom: 24px
+            +rel
+        &-text
+            font-size: 16px
+            line-height: 28px
+            font-weight: 300
+            color: #8c8c8c
+            margin-bottom: 40px
+            max-width: $width / 2
+            text-align: center
+            +monts
+        &-nav
+            +dflex(center, row)
+            margin-bottom: 40px
+            .categories__button
+                padding: 9px 20px
+                font-size: 14px
+                line-height: 21px
+                font-weight: 300
+                background-color: #fff
+                color: #b3b3b3
+                border-radius: 3px
+                text-decoration: none
+                margin: 0 10px
+                +rel
+                &:hover
+                    background-color: #998675
+                    color: #fff
+                    box-shadow: 1px  1px 3px 1px #000
+                &:first-child
+                    padding: 9px 25px
+                &:first-child
+                    margin: 0
+        .projects-carts
+            max-width: 1170px
+            margin-bottom: 40px
+            +dflex(center, row)
+            flex-flow: wrap                
+            .project-item
+                width: 300px
+                background-color: #fbfaf8
+                align-tems: center
+                position: relative
+                +dflex($spb,row)
+                flex-flow: wrap
+                margin: 0 30px 30px 0
+                &::last-child
+                    margin: 0
+                &:hover
+                    box-shadow: 1px 1px 1px 2px #ccc
+                &:hover .project-item-pic
+                    filter: brightness(40%)
+                &:hover .project-item-wrp 
+                    background-color: #362f2d
+                &:hover .project-item-title
+                    color: #fff
+                &:hover .project-item-text
+                    color: #c7b299
+                &:hover .project-item-wrp:before 
+                    border-bottom: 10px solid #362f2d
+                &:hover .project-item-btn-chain 
+                    display: block
+                &:hover .project-item-btn-search 
+                    display: block
+                &-pic 
+                    display: block
+                    width: 100%                    
+                &-wrp
+                    display: block 
+                    padding: 10px
+                    -webkit-box-sizing: border-box
+                    -moz-box-sizing: border-box
+                    box-sizing: border-box
+                    background-color: #fbfaf8
+                    position: relative
+                    width: 100%
+                    text-align: left
+                &-wrp:before 
+                    content: ""
+                    border: 10px solid transparent
+                    border-bottom: 10px solid #ccc
+                    position: absolute
+                    top: -20px
+                    left: 15px
+                    color: #fbfaf8
+                &-title 
+                    display: block
+                    text-align: center
+                    font-family: raleway
+                    font-size: 20px
+                    line-height: 1.2
+                    font-weight: 500
+                    color: #c7b299
+                &-text 
+                    display: block
+                    text-align: center
+                    font-family: montserrat
+                    font-size: 14px
+                    line-height: 20px
+                    font-weight: 300
+                    color: #d1d1d1
+                &-btn-chain 
+                    display: none
+                    width: 28px
+                    height: 28px
+                    border: none
+                    //border: 1px solid red
+                    background-color: transparent
+                    position: absolute
+                    top: 106px
+                    left: 80px
+                    .chain-pic
+                        fill: #c7b299                       
+                &-btn-search 
+                    display: none
+                    width: 28px
+                    height: 28px
+                    border: none
+                    background-color: transparent
+                    position: absolute
+                    top: 106px
+                    right: 93px
+                    text-decoration: none
+                    .search-pic
+                        fill: #fff
+                    &:hover
+                        bacground-color: #2f2f30                     
+        .load-more__button
+            padding: 21px 38px
+            font-size: 14px
+            line-height: 23px
+            font-weight: 800
+            text-transform: uppercase
+            background-color: #998675
+            color: #ffffff
+            border-radius: 3px
+            text-decoration: none
+            margin: 0 10px
+            +rel
+            &:hover
+                background-color: #998675
+                color: #fff
+                box-shadow: 1px  1px 3px 1px #000
+
+    .video-presentation
+        width: $width
+        min-height: 705px
+        background-color: rgba(17,17,17,0.5)
+        position: relative
+        .video-play
+            object-fit: cover
+        &:hover .video-play
+            filter: brightness(40%)
+        .video-control
+            max-width: $width / 3
+            position: absolute
+            +dflex(center, column)
+            align-items: center
+            top: 34%
+            left: 34%
+            .video-play-btn 
+                display: flex
+                width: 100px
+                height: 100px
+                border: none
+                border-radius: 50%
+                background-color: transparent
+                margin-bottom: 45px
+                .video-play-btn-icon 
+                    margin: auto
+                    fill: #fff
+            .video-play-btn:hover .video-play-btn-icon 
+                fill: coral
+            .video-play-btn:active .video-play-btn-icon 
+                fill: bisque
+            .video-play-btn--hide 
+                display: none
+            .video-control-title
+                font-size: 30px
+                line-height: 1.2
+                font-weight: 500
+                color: #ffffff
+                margin-bottom: 30px
+                +rel
+            .video-control-text 
+                font-size: 16px
+                line-height: 28px
+                font-weight: 300
+                color: #ffffff
+                text-align: center
+                margin-bottom: 40px
+                +monts
+            .time 
+                font-size: 14px
+                line-height: 24px
+                font-weight: 400
+                color: #c7b299
+                +monts
+
+    .for-mobile
+        margin: 0 auto
+        max-width: $width
+        background-color: #fbfaf8
+        background-image: url('../img/bg/iphone_in_hand.png')
+        background-repeat: no-repeat
+        background-position: 30% 100%
+        display: flex
+        padding: 200px 390px 183px 857px
+        //+outl
+        &-wrap
+            width: $width / 3
+            +dflex(center, column)
+            align-items: flex-start
+            flex-wrap: wrap
+            .for-mobile-title
+                margin: 0 0 40px 0
+                font-size: 30px
+                line-height: 1.2
+                font-weight: 600
+                color: #555555
+                text-align: left
+                +rel
+            .for-mobile-text
+                margin: 0 0 40px 0
+                font-size: 16px
+                line-height: 1.2
+                font-weight: 300
+                color: #8c8c8c
+                max-width: 657px
+                flex-flow: wrap
+                text-align: left
+                +rel
+            .for-mobile-list
+                margin: 0 0 0 0
+                list-style-type: none
+                &-item
+                    position: relative
+                    font-size: 16px
+                    line-height: 32px
+                    font-weight: 300
+                    color: #8c8c8c
+                    margin-left: 50px
+                    +monts
+                    &::before
+                        position: absolute
+                        display: block
+                        content: '>'
+                        width: 21px
+                        height: 21px
+                        background-color: #c7b299
+                        color: #fff
+                        border-radius: 50%
+                        background-size: cover
+                        text-align: center
+                        line-height: 21px
+                        top: 5px
+                        left: -29px
+
+    .satisfied-clients
+        max-width: $width
+        padding: 70px 500px
+        background-color: #f4f5f8
+        background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%)
+        +dflex(center, row)
+        align-items: center
+        &-list
+            alig-items: center
+            display: flex
+            justify-content: center
+            .satisfied-clients-item 
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                max-width: 300px
+                padding: 10px 10px 0 10px
+                box-sizing: border-box
+                &:after 
+                    content: ""
+                    display: block
+                    width: 30px
+                    height: 2px
+                    background-color: #555555
+                &:hover .satisfied-clients-item-icon 
+                    fill: #c7b299
+                &:hover .satisfied-clients-item-title 
+                    color: #c7b299
+                &:hover:after 
+                    background-color: #c7b299
+                &-icon 
+                    display: block
+                    fill: #c7b299
+                    margin: 0 0 20px 0
+                &-title 
+                    width: $width
+                    margin: 0 0 10px 0
+                    text-align: center
+                    font-size: 48px
+                    line-height: 36px
+                    font-weight: 200
+                    color: #ffffff
+                    +monts
+                &-txt 
+                    width: 100%
+                    text-align: center                    
+                    font-size: 14px
+                    line-height: 20px
+                    font-weight: 300
+                    color: #c7b299
+                    +monts
