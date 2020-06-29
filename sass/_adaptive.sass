@@ -1,0 +1,248 @@
+/** Imports**/
+@import 'vars'
+@import 'mixin'
+@import 'blocks'
+
+@media (max-width: 480px)
+    .content
+        max-width: 100%
+    .content .header
+        position: relative
+        align-items: flex-start
+        padding: 20px
+        +dflex($spb,row)
+    .content .header .head-block
+        max-width: 100%
+        margin: 0 0 0 0
+        +dflex($spb, row)
+    .content .header .head-block .header__logo
+        width: 185px
+        margin: 0 0 0 0
+    .content .header .head-block .nav-func
+        //align-items: flex-start
+        //+dflex(center,column)
+        display: none
+    .content .header .head-block .nav-func .head-block__nav
+        align-items: center
+        +dflex(center, column)
+    .content .header .slider-block
+        display: none
+    .content .main .video-presentation
+        display: none
+    .content .main .main__services
+        max-width: 100%
+        margin: 0  auto
+    .content .main .main__services .services-list
+        flex-flow: wrap
+        margin: 0 0 0 0
+    .content .main .main__services .services-list .services-item
+        padding: 10px 10px 10px 10px
+        max-width: 240px
+    .content .main .main__services .development
+        display: none
+    .content .main .aside-content
+        display: none
+    .content .main .projects
+        max-width: 100%
+        margin: 0 auto
+        padding: 0
+    .content .main .projects-title
+        margin: 24px 0 0 0
+        font-size: 24px
+    .content .main .projects .projects-carts
+        max-width: 100%
+        margin-bottom: 0
+    .content .main .projects .projects-carts .project-item
+        margin: 0 0 30px 0
+        max-width: 100%
+    .content .main .projects-text
+        max-width: 65%
+        font-size: 12px
+        line-height: 23px
+        margin-bottom: 30px
+    .content .main .projects-nav
+        max-width: 65%
+        flex-flow: wrap
+        margin-bottom: 40px
+    .content .main .projects-nav .categories__button
+        margin: 0 10px 10px 0
+        padding: 0px 9px
+    .content .main .projects-nav .categories__button:first-child
+        margin: 0 10px 10px 0
+        padding: 0px 13px
+    .content .main .projects .load-more__button
+        display: none
+    .content .main .for-mobile
+        width: 100%
+        background-position: 10% 100%
+        padding: 20px 0 15px 0
+        background-size: 35%
+        justify-content: center
+        margin: 10px auto 0
+    .content .main .for-mobile-wrap
+        max-width: 100%
+        padding: 0 20px
+        align-items: center
+    .content .main .for-mobile-wrap .for-mobile-title
+        min-width: 0
+        max-width: 80%
+        text-align: center
+        font-size: 25px
+    .content .main .for-mobile-wrap .for-mobile-text
+        min-width: 0
+        max-width: 100%
+        margin: 0 5px 40px 5px
+        font-size: 12px
+    .content .main .for-mobile-wrap .for-mobile-list
+        min-width: 0
+        max-width: 60%
+        margin: 0px 0 10px 60px
+    .content .main .for-mobile-wrap .for-mobile-list-item
+        font-size: 12px
+        line-height: 24px
+        margin: 0 0 0 30px
+    .content .main .satisfied-clients
+        width: 100%
+        padding: 20px 0
+    .content .main .satisfied-clients-list
+        flex-direction: column
+    .content .main .satisfied-clients-item
+        padding: 10px
+    .content .main .satisfied-clients-list .satisfied-clients-item-txt
+        padding: 0 0 5px 0
+    .content .main .recent-posts
+        max-width: 100%
+        padding: 80px 10px 50px
+    .content .main .recent-posts .posts-title
+        font-size: 25px
+    .content .main .recent-posts .posts-text
+        max-width: 100%
+    .content .main .recent-posts .recent-posts-block
+        flex-direction: column
+        margin: 0px 0 20px 0
+    .content .main .recent-posts .recent-posts-block .post-item
+        margin: 0 0 0 0
+    .content .main .partners
+        max-width: 100%
+        padding: 60px 0
+        flex-direction: column
+    .content .main .partners .partners-item
+        margin: 0 90px 20px
+    .content .contacts
+        display: none
+    .content .copyrights
+        max-width: 100%
+        flex-flow: wrap
+    .content .copyrights .copyright-menu
+        margin: 20px 0 0 0
+    .content .copyrights .designed-by
+        margin: -15px 0 12px 0
+
+    .content .header .head-block .hamburger-menu
+        z-index: 4
+        +dflex($spb, row)
+    #menu__toggle
+        opacity: 0
+    #menu__toggle:checked ~ .menu__btn > span
+        position: fixed
+        transform: rotate(45deg)
+    #menu__toggle:checked ~ .menu__btn > span::before
+        position: fixed
+        top: 0
+        transform: rotate(0)
+    #menu__toggle:checked ~ .menu__btn > span::after
+        position: fixed
+        top: 0
+        transform: rotate(90deg)
+    #menu__toggle:checked ~ .menu__box
+        visibility: visible
+        left: 0
+    .content .header .head-block .hamburger-menu .menu__btn
+        display: flex
+        position: absolute
+        align-items: center
+        margin: 0 0 0 0
+        top: 36px
+        right: 64px
+        height: 30px
+        cursor: pointer
+        z-index: 4
+        & > span,
+        & > span::before,
+        & > span::after
+            display: block
+            position: absolute
+            width: 36px
+            height: 2px
+            background-color: #fff
+            transition-duration: .25s
+        & > span::before
+            content: ''
+            top: -8px
+        & > span::after
+            content: ''
+            top: 8px
+    .content .header .head-block .hamburger-menu .menu__box
+        display: block
+        position: fixed
+        visibility: hidden
+        text-align: center
+        top: 0
+        left: -100%
+        width: 100%
+        height: 100%
+        margin: 0
+        padding: 80px 0
+        list-style-type: none
+        background-color: #372f2d
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+        transition-duration: .25s
+    .content .header .head-block .hamburger-menu .menu__box .menu-box-list
+        list-style-type: none
+    .content .header .head-block .hamburger-menu .menu__box .menu-box-list .menu__item
+        display: block
+        padding: 12px 24px
+        color: #fff
+        font-family: 'Roboto', sans-serif
+        font-size: 20px
+        font-weight: 600
+        text-decoration: none
+        transition-duration: .25s
+        position: relative
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            left: 25%
+            top: 46px
+            width: 50%
+            height: 1px
+            background-color: #4e413e
+    .content .header .head-block .hamburger-menu .menu__box .menu-box-list .menu__item
+        &::first-child
+            position: relative
+            &::after
+                content: ""
+                display: block
+                position: absolute
+                left: 100px
+                top: 46px
+                width: 90%
+                height: 1px
+                background-color: #4e413e
+        &:hover
+            color: #c7b299
+        &:active
+            color: #ccc
+
+@media (max-width : 1600px)
+    .content .header .slider-block .header__slider
+        width: $width - 500px
+    .content .main .main__services .services-list
+        margin: 0 33px 100px 0
+    .content .main .video-presentation
+        display: none
+    .content .main .projects
+        padding: 80px 0 0 0
+    .content .main .main__services .development
+        display: none

@@ -1,0 +1,1077 @@
+/** Imports**/
+@import 'vars'
+@import 'mixin'
+@import 'blocks'
+
+
+/** Monserat font **/
+/** @font-face 
+ font-family: 'montserrat', 'arial', sans-serif
+ src: url('../fonts/montserrat/montserrat-extralight.ttf')
+ font-weight: 200
+ font-style: normal
+ @font-face 
+ font-family: 'montserrat', 'arial', sans-serif
+ src: url('../fonts/montserrat/montserrat-light.ttf')
+ font-weight: 300
+ font-style: normal
+ @font-face 
+ font-family: 'montserrat', 'arial', sans-serif
+ src: url('../fonts/montserrat/montserrat-regular.ttf')
+ font-weight: 400
+ font-style: normal
+ 
+/** Raleway **/
+/**@font-face 
+ font-family: 'raleway', 'arial', sans-serif
+ src: url('../fonts/raleway/raleway-regular.ttf')
+ font-weight: 400
+ font-style: normal
+ @font-face 
+ font-family: 'raleway', 'arial', sans-serif
+ src: url('../fonts/raleway/raleway-medium.ttf')
+ font-weight: 500
+ font-style: normal
+ @font-face 
+ font-family: 'raleway', 'arial', sans-serif
+ src: url('../fonts/raleway/raleway-semibold.ttf')
+ font-weight: 600
+ font-style: normal
+ @font-face 
+ font-family: 'raleway', 'arial', sans-serif
+ src: url('../fonts/raleway/raleway-bold.ttf')
+ font-weight: 700
+ font-style: normal
+ @font-face 
+ font-family: 'raleway', 'arial', sans-serif
+ src: url('../fonts/raleway/raleway-extrabold.ttf')
+ font-weight: 800
+ font-style: normal
+ 
+/** Roboto font **/
+/**@font-face 
+ font-family: roboto
+ src: url('../fonts/roboto/roboto-regular.ttf')
+ font-weight: 400
+ font-style: normal **/
+
+.content 
+    max-width: $width
+    margin: 0 auto
+
+    .header
+        max-width: 100%
+        margin: 0 auto
+        background-color: rgba(17,17,17,0.7)
+        background-image: url('../img/bg/bg_photo.png') 
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        +dflex($spb, column)
+        align-items: center
+        padding: 40px 375px
+        .head-block
+            max-width: 1170px
+            margin: 0 0 285px 0
+            align-items: center
+            +dflex(center, row)
+            .header__logo
+                width: 185px
+                margin: 0 220px 0 0
+            &:hover
+                color: #998675
+            .logo-icon 
+                fill: CurrentColor
+            .logo-txt
+                font-size: 34px 
+                +rel
+            .nav-func
+                align-items: center
+                +dflex(center, row)
+                .head-block__nav
+                    align-items: center
+                    +dflex(center, row)
+                .nav-link
+                    text-decoration: none
+                    margin: 0 30px 0 0 
+                    .link-text
+                        flex-wrap: nowrap
+                        font-size: 14px
+                        line-height: 1.2
+                        font-weight: 300
+                        color: #ffffff
+                        text-align: center
+                        +monts
+                        &:hover
+                            color: #c7b299
+                        &:active
+                            color: #ccc
+                .cart
+                    width: 18px
+                    height: 24px
+                    margin: 0 0 0 33px
+                    fill: #ffffff
+                    &:hover
+                        fill: #c7b299
+                    &:active
+                        fill: #ccc
+                .search-input
+                    width: 24px
+                    height: 24px
+                    margin: 0 0 0 26px
+                    fill: #ffffff
+                    &:hover
+                        fill: #c7b299
+                    &:active
+                        fill: #ccc
+            .hamburger-menu
+                display: none
+        .slider-block
+            width: 100% 
+            align-items: center
+            +dflex($spb, column)
+            .header__slider
+                margin: -55px 0 0 0
+                width: $width - 300px
+                height: 261px
+                .slider-text
+                    align-items: center
+                    +dflex($spb, column)
+                    .text-unique
+                        display: block
+                        font-size: 36px
+                        line-height: 1.2
+                        font-weight: 500
+                        color: #ffffff
+                        margin: -26px 0 14px 0
+                        +rel
+                    .text-portfolio
+                        display: block
+                        font-size: 52px
+                        line-height: 1.2
+                        font-weight: 800
+                        color: #ffffff
+                        margin: 0 0 19px 0
+                        +rel
+                    .text-paragraph
+                        font-size: 16px
+                        line-height: 24px
+                        font-weight: 300
+                        color: #ffffff
+                        margin: 0 0 52px 0
+                        +monts 
+                    .paragraph__button                                 
+                        .button-text
+                            padding: 21px 38px
+                            font-size: 14px
+                            line-height: 23px
+                            font-weight: 800
+                            text-transform: uppercase
+                            background-color: #998675
+                            color: #ffffff
+                            border-radius: 3px
+                            text-decoration: none
+                            +rel
+                            &:hover
+                                box-shadow: 3px  3px 5px 3px #000
+                            &:active
+                                background-color: #ccc
+                .slider-btn-link
+                    display: block                
+                    .slider-btn-left, 
+                    .slider-btn-right
+                        fill: #d3c1ad
+                        &:hover
+                            fill: #a3a2a0                
+            .pagination
+                width: 98px
+                height: 11px
+                +dflex($spb, row)
+                align-items: center
+                margin: 330px 0 0 0 
+                &-item
+                    display: block
+                    width: 11px
+                    height: 11px
+                    background-color: #909093
+                    border: 2px solid transparent
+                    border-radius: 50%
+                    &:hover
+                        transform: scale(1.2)
+                        border: 2.0px solid #ae9f90
+                        background-color: #27262b
+
+    .main
+        max-width: 100%
+        margin: 0 auto
+        .main__services
+            margin: 0 auto
+            max-width: $width
+            +dflex($spb, column)
+            align-items: center
+            padding: 50px 0 0 0
+            .services-list
+                align-self: center
+                display: flex
+                justify-content: center
+                margin: 0 33px 160px 0
+                .services-item 
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    max-width: 300px
+                    padding: 10px 10px 0 10px
+                    box-sizing: border-box
+                    &:after 
+                        content: ""
+                        display: block
+                        width: 70px
+                        height: 3px
+                        background-color: #555555
+                    &:hover .services-item-icon 
+                        fill: #c7b299
+                    &:active .services-item-icon
+                        fill: #ccc
+                    &:hover .services-item-title 
+                        color: #c7b299
+                    &:active .services-item-title
+                        color: #ccc
+                    &:hover:after 
+                        background-color: #c7b299
+                    &:active:after
+                        background-color: #ccc
+                    &-icon 
+                        display: block
+                        fill: #555555
+                        margin: 0 0 20px 0
+                    &-title 
+                        width: $width
+                        margin: 0 0 10px 0
+                        text-align: center
+                        font-size: 22px
+                        line-height: 1.2
+                        font-weight: 600
+                        color: #555555
+                        +rel
+                    &-txt 
+                        text-align: center
+                        font-size: 14px
+                        line-height: 14px
+                        font-weight: 300
+                        color: #8c8c8c
+                        +rel
+            .development
+                background-color: #fbfaf8
+                align-items: center
+                +dflex($spb, column)
+            .anons-block
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                width: 760px
+                text-align: center
+                .title
+                    font-size: 30px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: #555555
+                    +rel
+                .anons-text
+                    font-size: 16px
+                    line-height: 28px
+                    font-weight: 300
+                    color: #8c8c8c
+                    +rel
+            .img-block
+                width: 200%
+                min-height: 552px
+                background-image: url('../img/img-block/browser_center.png'), url('../img/img-block/browser_left.png'),url('../img/img-block/browser_right.png')
+                background-size: 65%, 58%, 58%
+                background-repeat: no-repeat
+                background-position: bottom center, bottom left, bottom right
+
+        .aside-content  
+            padding: 60px 0 53px
+            background-color: #f4f5f8
+            background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%)
+            +dflex(center, row)
+            align-items: center
+            .aside-text
+                width: 530px
+                +dflex(center, column)
+                align-content: center
+                margin: 0 375px 0 0
+                .aside-title
+                    +dflex($spb, row)
+                    align-items: center
+                    font-size: 28px
+                    line-height: 1.2
+                    font-weight: 400
+                    color: #ffffff
+                    +rel
+                    .waxom-mini
+                        display: block
+                        color: #c7b299
+                        margin: 0 5px 0 0 
+                .aside-paragraph
+                    font-size: 18px
+                    line-height: 1.2
+                    font-weight: 300
+                    color: #615855
+                    margin: 0 0 0 0
+                    +monts
+            .aside__button                                 
+            .button-text
+                padding: 21px 38px
+                font-size: 14px
+                line-height: 23px
+                font-weight: 800
+                text-transform: uppercase
+                background-color: #998675
+                color: #ffffff
+                border-radius: 3px
+                text-decoration: none
+                +rel            
+                &:hover
+                    box-shadow: 3px  3px 5px 3px #000
+                &:active
+                    background-color: #ccc
+
+        .projects
+            max-width: $width
+            padding: 80px 0 
+            +dflex(center, column)
+            align-items: center
+            &-title
+                font-size: 30px
+                line-height: 1.2
+                font-weight: 600
+                color: #555555
+                margin-bottom: 24px
+                +rel
+            &-text
+                font-size: 16px
+                line-height: 28px
+                font-weight: 300
+                color: #8c8c8c
+                margin-bottom: 40px
+                max-width: $width / 2
+                text-align: center
+                +monts
+            &-nav
+                +dflex(center, row)
+                margin-bottom: 40px
+                .categories__button
+                    outline: none
+                    padding: 9px 20px
+                    font-size: 14px
+                    line-height: 21px
+                    font-weight: 300
+                    background-color: #fff
+                    color: #b3b3b3
+                    border-radius: 3px
+                    text-decoration: none
+                    margin: 0 10px
+                    +rel
+                    &:hover
+                        background-color: #998675
+                        color: #fff
+                        box-shadow: 1px  1px 3px 1px #000
+                    &:first-child
+                        padding: 9px 25px
+                    &:first-child
+                        margin: 0
+            .projects-carts
+                max-width: 1170px
+                margin-bottom: 40px
+                +dflex(center, row)
+                flex-flow: wrap                
+                .project-item
+                    text-decoration: none
+                    width: 300px
+                    background-color: #fbfaf8
+                    align-items: center
+                    position: relative
+                    +dflex($spb,row)
+                    flex-flow: wrap
+                    margin: 0 30px 30px 0
+                    &::last-child
+                        margin: 0
+                    &:hover
+                        box-shadow: 1px 1px 1px 2px #ccc
+                    &:hover .project-item-pic
+                        filter: brightness(40%)
+                    &:hover .project-item-wrp 
+                        background-color: #362f2d
+                    &:hover .project-item-title
+                        color: #fff
+                    &:hover .project-item-text
+                        color: #c7b299
+                    &:hover .project-item-wrp:before 
+                        border-bottom: 10px solid #362f2d
+                    &:hover .project-item-btn-chain 
+                        display: block
+                    &:hover .project-item-btn-search 
+                        display: block
+                    &-pic 
+                        display: block
+                        width: 100%                    
+                    &-wrp
+                        display: block 
+                        padding: 10px
+                        -webkit-box-sizing: border-box
+                        -moz-box-sizing: border-box
+                        box-sizing: border-box
+                        background-color: #fbfaf8
+                        position: relative
+                        width: 100%
+                        text-align: left
+                    &-wrp:before 
+                        content: ""
+                        border: 10px solid transparent
+                        border-bottom: 10px solid #ccc
+                        position: absolute
+                        top: -20px
+                        left: 15px
+                        color: #fbfaf8
+                    &-title 
+                        display: block
+                        text-align: center
+                        font-family: raleway
+                        font-size: 20px
+                        line-height: 1.2
+                        font-weight: 500
+                        color: #c7b299
+                    &-text 
+                        display: block
+                        text-align: center
+                        font-family: montserrat
+                        font-size: 14px
+                        line-height: 20px
+                        font-weight: 300
+                        color: #d1d1d1
+                    &-btn-chain 
+                        display: none
+                        width: 28px
+                        height: 28px
+                        border: none
+                        background-color: transparent
+                        position: absolute
+                        top: 106px
+                        left: 80px
+                        .chain-pic
+                            fill: #c7b299
+                            &:hover
+                                fill: #ccc
+                            &:active
+                                stroke: #c7b299                        
+                    &-btn-search 
+                        display: none
+                        width: 28px
+                        height: 28px
+                        border: none
+                        background-color: transparent
+                        position: absolute
+                        top: 106px
+                        right: 93px
+                        text-decoration: none
+                        .search-pic
+                            fill: #c7b299
+                            &:hover
+                                fill: #ccc
+                            &:active
+                                stroke: #c7b299                   
+            .load-more__button
+                outline: none
+                padding: 21px 38px
+                font-size: 14px
+                line-height: 23px
+                font-weight: 800
+                text-transform: uppercase
+                background-color: #998675
+                color: #ffffff
+                border-radius: 3px
+                text-decoration: none
+                margin: 0 10px
+                +rel
+                &:hover
+                    background-color: #998675
+                    color: #fff
+                    box-shadow: 1px  1px 3px 1px #000
+                &:active
+                    background-color: #ccc
+
+        .video-presentation
+            width: $width
+            min-height: 705px
+            background-color: rgba(17,17,17,0.5)
+            position: relative
+            +dflex(center, row)
+            align-items: center
+            .video-play
+                object-fit: cover
+            &:hover .video-play
+                filter: brightness(40%)
+            .video-control
+                max-width: $width / 3
+                position: absolute
+                +dflex(center, column)
+                align-items: center
+                .video-play-btn 
+                    display: flex
+                    width: 100px
+                    height: 100px
+                    border: none
+                    border-radius: 50%
+                    background-color: transparent
+                    margin-bottom: 45px
+                    outline: none
+                    .video-play-btn-icon 
+                        margin: auto
+                        fill: #fff
+                .video-play-btn:hover .video-play-btn-icon 
+                    fill: coral
+                .video-play-btn:active .video-play-btn-icon 
+                    fill: bisque
+                .video-play-btn--hide 
+                    display: none
+                .video-control-title
+                    font-size: 30px
+                    line-height: 1.2
+                    font-weight: 500
+                    color: #ffffff
+                    margin-bottom: 30px
+                    +rel
+                .video-control-text 
+                    font-size: 16px
+                    line-height: 28px
+                    font-weight: 300
+                    color: #ffffff
+                    text-align: center
+                    margin-bottom: 40px
+                    +monts
+                .time 
+                    font-size: 14px
+                    line-height: 24px
+                    font-weight: 400
+                    color: #c7b299
+                    +monts
+
+        .for-mobile
+            margin: 0 auto
+            max-width: $width
+            background-color: #fbfaf8
+            background-image: url('../img/bg/iphone_in_hand.png')
+            background-repeat: no-repeat
+            background-position: 30% 100%
+            display: flex
+            padding: 200px 390px 183px 857px
+            &-wrap
+                max-width: $width / 3
+                +dflex(center, column)
+                align-items: flex-start
+                flex-wrap: wrap
+                .for-mobile-title
+                    min-width: 414px
+                    margin: 0 0 40px 0
+                    font-size: 30px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: #555555
+                    text-align: left
+                    +rel
+                .for-mobile-text
+                    min-width: 414px
+                    margin: 0 0 40px 0
+                    font-size: 16px
+                    line-height: 1.2
+                    font-weight: 300
+                    color: #8c8c8c
+                    flex-flow: wrap
+                    text-align: left
+                    +rel
+                .for-mobile-list
+                    min-width: 400px
+                    margin: 0 0 0 0
+                    list-style-type: none
+                    &-item
+                        position: relative
+                        font-size: 16px
+                        line-height: 32px
+                        font-weight: 300
+                        color: #8c8c8c
+                        margin-left: 50px
+                        +monts
+                        &::before
+                            position: absolute
+                            display: block
+                            content: '>'
+                            width: 21px
+                            height: 21px
+                            background-color: #c7b299
+                            color: #fff
+                            border-radius: 50%
+                            background-size: cover
+                            text-align: center
+                            line-height: 21px
+                            top: 5px
+                            left: -29px
+
+        .satisfied-clients
+            max-width: $width
+            padding: 70px 0
+            background-color: #f4f5f8
+            background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%)
+            +dflex(center, row)
+            align-items: center
+            &-list
+                align-items: center
+                +dflex(center, row)
+                .satisfied-clients-item 
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    max-width: 300px
+                    padding: 10px 10px 0 10px
+                    box-sizing: border-box
+                    &:after 
+                        content: ""
+                        display: block
+                        width: 30px
+                        height: 2px
+                        background-color: #555555
+                    &:hover .satisfied-clients-item-icon 
+                        fill: #c7b299
+                    &:active .satisfied-clients-item-icon
+                        fill: #ccc
+                    &:hover .satisfied-clients-item-title 
+                        color: #c7b299
+                    &:active .satisfied-clients-item-title
+                        color: #ccc
+                    &:hover:after 
+                        background-color: #c7b299
+                    &:active:after
+                        background-color: #ccc
+                    &-icon 
+                        display: block
+                        fill: #c7b299
+                        margin: 0 0 20px 0
+                    &-title 
+                        width: $width
+                        margin: 0 0 10px 0
+                        text-align: center
+                        font-size: 48px
+                        line-height: 36px
+                        font-weight: 200
+                        color: #ffffff
+                        +monts
+                    &-txt 
+                        width: 100%
+                        text-align: center                    
+                        font-size: 14px
+                        line-height: 20px
+                        font-weight: 300
+                        color: #c7b299
+                        +monts
+
+        .recent-posts
+            max-width: $width
+            padding: 80px 375px 140px
+            align-items: center
+            +dflex(center, column)
+            .posts-title
+                font-size: 30px
+                line-height: 1.2
+                font-weight: 600
+                color: #555555
+                text-align: center
+                +rel
+            .posts-text
+                width: $width / 2
+                flex-flow: wrap
+                font-size: 16px
+                line-height: 28px
+                font-weight: 300
+                color: #8c8c8c
+                text-align: center
+                +monts
+            .recent-posts-block
+                margin: 0 0 40px 0
+                +dflex(center, row)
+                &::last-child                    
+                    margin: 0
+                .post-item
+                    margin: 0 30px 0 0
+                    padding: 0 0 30px 0
+                    width: 370px
+                    box-sizing: border-box
+                    border: 1px solid #f8f8f8
+                    align-items: flex-start
+                    position: relative
+                    +dflex(center, column)
+                    &:hover
+                        background-color: #362f2d
+                    &:hover .post-item-img
+                        filter: brightness(50%)
+                    &:hover .post-date .date-number
+                        background-color: #c7b299
+                        color: #ffffff
+                        z-index: 3
+                    &:hover .post-date .date-day
+                        background-color: #a48d72
+                        color: #ffffff
+                        z-index: 3
+                    .post-date
+                        top: 20px
+                        left: 20px
+                        position: absolute
+                        align-items: center
+                        +dflex(center, column)
+                        .date-number
+                            font-size: 24px
+                            line-height: 20px
+                            font-weight: 300
+                            color: #ffffff
+                            width: 50px
+                            height: 35px
+                            background-color: #363636
+                            border-radius: 3.0px 3.0px 0.0px 0.0px
+                            align-items: center
+                            +dflex(center, column)
+                            +monts
+                        .date-day
+                            font-size: 12px
+                            line-height: 20px
+                            font-weight: 400
+                            color: #ffffff
+                            width: 50px
+                            height: 25px
+                            background-color: #252525
+                            border-radius: 0.0px 0.0px 3.0px 3.0px
+                            align-items: center
+                            +dflex(center, column)
+                            +rob
+                    .post-item-img
+                        width: 100%
+                        background-color: #777777
+                        margin: 0 0 30px 0
+                    .post-item-title
+                        font-size: 20px
+                        line-height: 1.2
+                        font-weight: 500
+                        color: #555555
+                        text-align: left
+                        margin: 20px 0 30px 30px
+                        +rel
+                    .post-item-text
+                        font-size: 14px
+                        line-height: 22px
+                        font-weight: 300
+                        color: #8c8c8c
+                        text-align: left
+                        margin: 0px 0 30px 30px
+                        +monts
+                    .learn-more-btn
+                        margin-left: 27px
+                        padding: 2px 9px 2px 6px
+                        min-width: 90px
+                        text-decoration: none
+                        &:hover
+                            outline: 1px solid #7a7977
+                        &:active                           
+                            opacity: 0.9
+                        &-text
+                            font-size: 14px
+                            line-height: 20px
+                            font-weight: 300
+                            color: #c7b299
+                            position: relative
+                            text-align: center
+                            +monts
+                            &::after
+                                content: url(../img/posts-imgs/arrow.svg)
+                                position: absolute
+                                display: block
+                                width: 5px
+                                height: 8px
+                                color: #c7b299
+                                top: 0px
+                                right: -8px
+            .posts-switch-buttons
+                align-items: center
+                +dflex(center, row)
+                .switch-button
+                    display: block
+                    width: 22px
+                    height: 22px
+                    position: relative
+                    background-color: #fff
+                    box-sizing: border-box
+                    border: 1px solid #c7b299
+                    border-radius: 50%
+                    margin: 0 8px
+                    outline: none
+                    &::before
+                        content: '>'
+                        position: absolute
+                        display: block
+                        width: 22px
+                        height: 22px
+                        color: #c7b299
+                        left: 0
+                        top: 2px
+                    &:hover
+                        border: 1px solid #d1d1d1
+                    &:active
+                        border: 1px solid #66451f
+                        opacity: 0.9
+
+        .partners
+            max-width: $width
+            background-color: rgba(17,17,17,0.7)
+            background-image: url('../img/bg/bg_partners.png')
+            background-repeat: no-repeat
+            background-size: cover
+            padding: 140px 0
+            align-items: center
+            +dflex(center, row)
+            .partners-item  
+                margin: 0 90px
+                max-width: 210px
+                &::last-child
+                    margin: 0
+                .partners-item-logo
+                    &:hover
+                        opacity: 0.8
+                    &:active                
+                        opacity: 0.4
+    .contacts
+        margin: 0 auto
+        max-width: $width
+        height: 508px
+        background-color: #191919
+        padding: 110px 0 0 0
+        align-items: flex-start
+        +dflex(center, row)
+        .about-wacom
+            max-width: 258px
+            padding: 0 40px 0 0
+            margin: -24px 0 0 0
+            align-items: flex-start
+            +dflex(center, column)
+            .header__logo
+                width: 185px
+                color: #fff
+                margin: 0 0 30px 0
+                &:hover
+                    color: #998675
+                &:active
+                    color: #ccc
+                .logo-icon 
+                    fill: CurrentColor
+                .logo-txt
+                    font-size: 34px 
+                    +rel
+            .footer-post-item-text
+                font-size: 14px
+                line-height: 22px
+                font-weight: 300
+                color: #8c8c8c
+                text-align: left
+                margin: 0px 0 30px 0
+                +monts
+            .footer-learn-more-btn
+                padding: 2px 9px 2px 6px
+                min-width: 90px
+                text-decoration: none
+                background-color: #191919
+                outline: none
+                border: none
+                &:hover
+                    outline: 1px solid #7a7977
+                &:active .footer-learn-more-btn-text
+                    opacity: 0.9
+                    color: #c7b299
+                &-text
+                    font-size: 14px
+                    line-height: 24px
+                    font-weight: 300
+                    color: #555555
+                    position: relative
+                    text-align: center
+                    +monts
+                    &::after
+                        content: url(../img/posts-imgs/arrow.svg)
+                        position: absolute
+                        display: block
+                        width: 5px
+                        height: 8px
+                        color: #c7b299
+                        top: -2px
+                        right: -8px
+        .recent-posts-section
+            max-width: 262px
+            padding: 0 40px 0 0
+            align-items: flex-start
+            +dflex(center, column)
+            .posts-title
+                font-size: 24px
+                line-height: 1.2
+                font-weight: 700
+                color: #ffffff
+                +rel
+            .posts-block
+                max-width: 262px
+                align-items: flex-start
+                +dflex(center, column)
+                .post-block-item
+                    padding: 20px 10px 20px 0
+                    box-sizing: border-box
+                    border-bottom: 2px solid #252525
+                    align-items: flex-start
+                    +dflex(center, column)
+                    &:last-child
+                        border-bottom: none
+                    .post-link                    
+                        text-decoration: none
+                        &:hover .post-date
+                            color: #ffffff
+                        &:hover .post-content
+                            color: #c7b299
+                        .post-date
+                            margin: 0
+                            font-size: 12px
+                            line-height: 20px
+                            font-weight: 300
+                            color: #363636
+                            +monts
+                        .post-content
+                            margin: 0
+                            font-size: 14px
+                            line-height: 20px
+                            font-weight: 300
+                            color: #555555
+                            flex-flow: wrap
+                            +monts
+        .our-twitter-section
+            max-width: 262px
+            padding: 0 40px 0 0
+            align-items: flex-start
+            display: flex
+            justify-content: center
+            flex-direction: column
+            .twitter-title
+                font-size: 24px
+                line-height: 1.2
+                font-weight: 700
+                color: #ffffff
+                +rel
+            .twitter-block
+                max-width: 262px
+                align-items: flex-start
+                +dflex(center, column)
+                .twit-block-item
+                    padding: 20px 10px 20px 0
+                    box-sizing: border-box
+                    border-bottom: 2px solid #252525
+                    align-items: flex-start
+                    +dflex(center, column)
+                    &:last-child
+                        border-bottom: none
+                    .twit-link                    
+                        text-decoration: none
+                        &:hover .twit-time
+                            color: #ffffff
+                        &:hover .twit-content
+                            color: #c7b299
+                        .twit-time
+                            margin: 0
+                            font-size: 12px
+                            line-height: 20px
+                            font-weight: 300
+                            color: #363636
+                            +monts
+                        .twit-content
+                            margin: 0
+                            font-size: 14px
+                            line-height: 20px
+                            font-weight: 300
+                            color: #555555
+                            flex-flow: wrap
+                            +monts                        
+        .dribbble-widget
+            padding: 0 40px 0 0
+            align-items: center
+            +dflex(center, column)
+            .widget-title
+                font-size: 24px
+                line-height: 1.2
+                font-weight: 700
+                color: #fff
+                margin: 0 0 26px 0
+                +rel
+            .widget-block
+                max-width: 280px
+                align-items: center
+                +dflex(flex-start, row)
+                flex-flow: wrap
+                &-link
+                    text-decoration: none
+                    margin: 0 9px 9px 0
+                    box-sizing: border-box
+                    &:last-child
+                        margin: 0 0 9px 0
+                .widget-img
+                    width: 130px
+                    height: 98px
+                    background-color: #777777
+                    &:hover
+                        box-shadow: 0 0 2px 1px #363636
+                        opacity: 0.9
+                    &:active
+                        box-shadow: 0 0 2px #c7b299
+                        opacity: 0.8
+
+    .copyrights
+        margin: 0 auto
+        max-width: $width
+        height: 111px
+        background-color: #111111
+        align-items: center
+        +dflex(center, row)
+        .copyright-menu
+            font-size: 13px
+            line-height: 20px
+            font-weight: 300
+            color: #555555
+            margin: 0 450px 0 0
+            +monts
+            .waxom-footer
+                text-decoration: none
+                color: #959595
+                &:hover
+                    color: #fff
+            .privacy-police, .faq, .support
+                text-decoration: none
+                font-size: 13px
+                line-height: 20px
+                font-weight: 300
+                color: #555555
+                +monts
+                &:hover
+                    color: #c7b299
+        .designed-by
+            font-size: 13px
+            line-height: 20px
+            font-weight: 300
+            color: #555555
+            +monts
+            .theme-fire, .only-on
+                text-decoration: none
+                color: #555555
+                &:hover
+                    color: #959595
+
+
+@import 'adaptive' 
